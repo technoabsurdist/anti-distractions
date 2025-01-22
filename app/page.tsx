@@ -3,6 +3,7 @@ import Image from "next/image";
 import fs from "fs";
 import path from "path";
 import sizeOf from "image-size";
+import ReloadButton from "./reload-button";
 
 export const dynamic = 'force-dynamic';
 
@@ -51,11 +52,12 @@ export default function Home() {
         src={`/pics/${image.filename}`}
         alt="Random image"
         width={dimensions.width}
-        height={dimensions.height}
+        height={dimensions.height * 0.9}
         priority
       />
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
+        {/* <ReloadButton /> */}
         Work harder.
       </footer>
     </div>
