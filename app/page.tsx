@@ -1,7 +1,10 @@
+// "use client"
 import Image from "next/image";
 import fs from "fs";
 import path from "path";
 import sizeOf from "image-size";
+
+export const dynamic = 'force-dynamic';
 
 const getRandomImageWithDimensions = (() => {
   const imageDir = path.join(process.cwd(), 'public/pics');
